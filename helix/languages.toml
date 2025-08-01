@@ -1,0 +1,37 @@
+# [[language]]
+# name = "systemverilog"
+# scope = "source.systemverilog"
+# file-types = ["sv", "svh"]
+# language-servers = ["verible-verilog-ls"]
+
+# [language-server.verible-verilog-ls]
+# command = "/home/andrew/.local/share/nvim/mason/bin/verible-verilog-ls"
+# args = ["--rules_config_search"]
+
+[[language]]
+name = "verilog"
+scope = "source.verilog"
+injection-regex = "verilog"
+file-types = ["sv", "svh", "v", "vh"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "verible-verilog-ls" ]
+
+[language-server.verible-verilog-ls]
+command = "verible-verilog-ls"
+args = ["--rules=-line-length,-no-trailing-spaces" ]
+
+# [[language]]
+# name = "systemverilog"
+# scope = "source.systemverilog"
+# file-types = ["sv", "svh"]
+# comment-token = "//"
+# language-servers = [ "/home/andrew/.local/share/nvim/mason/bin/verible-verilog-ls" ]
+# indent = { tab-width = 4, unit = "    " }
+
+# [language-server.verible-verilog-ls]
+# command = "verible-verilog-ls"
+# The 'args' line was removed as it was likely causing the LSP to fail silently.
+# The command above assumes 'verible-verilog-ls' is in your system's PATH.
+# If it isn't, use the full path you had before:
+# command = "/home/andrew/.local/share/nvim/mason/bin/verible-verilog-ls"
